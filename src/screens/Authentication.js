@@ -16,18 +16,16 @@ import Login from './Login';
 import Signup from './Signup';
 import ForgotPassword from './ForgotPassword';
 
-const AuthenticationPage = (props) => {
+const Authentication = (props) => {
     const [login, setLogin] = useState(true);
     const [forgotpass, setForgotpass] = useState(false);
 
     const handleLoginPress = useMemo(() => () => setLogin(true), []);
     const handleSignupPress = useMemo(() => () => {
-        console.log('signup');
         setLogin(false);
         setForgotpass(false);
     }, []);
 
-    console.log('render');
     return (
         <ScrollView style={styles.maincont}>
             <Header handleLoginPress={handleLoginPress} handleSignupPress={handleSignupPress} login={login} />
@@ -105,4 +103,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default AuthenticationPage;
+export default Authentication;

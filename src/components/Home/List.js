@@ -56,11 +56,9 @@ const Item = (props) => {
 };
 
 const List = (props) => {
-    console.log('LIST');
     const [error, setError] = useState('');
 
     const renderItem = ({ item }) => {
-        console.log('renderItem');
         return <Item name={item.name} state_province={item['state-province']} web_pages={item.web_pages} setError={setError} />;
     };
 

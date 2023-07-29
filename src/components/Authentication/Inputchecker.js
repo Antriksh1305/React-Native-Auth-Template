@@ -30,7 +30,6 @@ export const handleLoginPress = (email, password, setError, setSuccess, onSucces
 export const onGoogleButtonPress = (setError, setSuccess) => {
     setSuccess(true);
     setError('Google Login Successful');
-    console.log('Google Button Pressed');
 };
 
 export const handleSignupPress = (name, email, password, confirmPass, setError, setSuccess, onSuccessCallback) => {
@@ -63,14 +62,12 @@ export const handlePasswordReset = (email, setError, setSuccess, onSuccessCallba
         setError('Please Enter Your Email');
     }
     else if (!isValidEmail(email)) {
-        console.log('Invalid Email');
         setError('Please Enter a Valid Email');
     }
     else {
         setSuccess(true);
-        setError('Login Successful');
+        setError('Password Reset Link Sent');
 
         if (typeof onSuccessCallback === 'function') { onSuccessCallback(); }
     }
-    console.log('Password Reset');
 };

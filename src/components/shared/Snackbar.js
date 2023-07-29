@@ -8,11 +8,10 @@ import { Snackbar } from 'react-native-paper';
 import * as Screen from '../../constants/Screen';
 
 const width = Screen.SCREEN_WIDTH;
-const height = Screen.SCREEN_HEIGHT;
 
 export const SnackBar = ({ error, setError, success }) => {
     return (
-        <SafeAreaProvider style={styles.snackbar}>
+        <SafeAreaProvider style={styles.snackbarBox}>
             <Snackbar
                 visible={!!error}
                 onDismiss={() => setError('')}
@@ -21,8 +20,8 @@ export const SnackBar = ({ error, setError, success }) => {
                     label: success ? 'OK' : 'Close',
                     onPress: () => setError(''),
                 }}
-                style={[
-                    { backgroundColor: success ? '#4caf50' : '#323232', height: 50, alignItems: 'center', position: 'absolute', bottom: 0 , left: 0, width: width*0.961 },
+                style={[styles.snackbar,
+                { backgroundColor: success ? '#4caf50' : '#323232' },
                 ]}
             >
                 {error}
@@ -32,9 +31,16 @@ export const SnackBar = ({ error, setError, success }) => {
 };
 
 const styles = StyleSheet.create({
-    snackbar: {
+    snackbarBox: {
         alignSelf: 'flex-start',
         justifyContent: 'flex-end',
         zIndex: 1000,
+    },
+    snackbar: {
+        position: 'absolute',
+        bottom: 0,
+        alignItems: 'center',
+        height: width / 7.82,
+        width: width * 0.961,
     },
 });

@@ -2,7 +2,7 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
 
-import ScreenNavigator from './src/navigators/ScreenNavigation';
+import ScreenNavigator from './src/navigators/ScreenNavigator';
 
 const App = () => {
     return (
