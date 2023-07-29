@@ -2,10 +2,7 @@
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Snackbar } from 'react-native-paper';
-import * as Screen from '../../constants/Screen';
 import { StyleSheet } from 'react-native';
-
-const width = Screen.SCREEN_WIDTH;
 
 export const SnackBar = ({ error, setError, success }) => {
     return (

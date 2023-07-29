@@ -20,9 +20,6 @@
 		E23B55F1FF7944BEA3B11BAE /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 19C288B0AC92458E8FBD2BCD /* SF-Pro-Text-Medium.otf */; };
 		7BB8EEC32EE740A5A4336016 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 60217945E0F14702B19027C1 /* SF-Pro-Text-Regular.otf */; };
 		DBAEF9D6126645A08A415410 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F443D136772342E5A2D07079 /* SF-Pro-Text-Semibold.otf */; };
-		F8119D9C69554206B70AC031 /* RobotoMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9ED422DD467740689506D6AB /* RobotoMono-Medium.ttf */; };
-		FFD59016120A408AB6C7C225 /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84D87CD479574167A74EFC8F /* Ubuntu-Medium.ttf */; };
-		268CB120C4E74043847C99A7 /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE9210F59A0141C38C9082D7 /* Ubuntu-Regular.ttf */; };
 		F685337BA9A3459BB24ACE1B /* SF-Pro-Rounded-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C727AE1F674407CACC75D00 /* SF-Pro-Rounded-Bold.ttf */; };
 		2D0D83EAF9044D7F8791E3D7 /* SF-Pro-Rounded-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77EE4D1CE65B4DBEAB74498A /* SF-Pro-Rounded-Heavy.ttf */; };
 		E7CED2D60DD34E569EAD7481 /* SF-Pro-Rounded-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E02F15B4D12846088F1373E4 /* SF-Pro-Rounded-Medium.ttf */; };
@@ -64,9 +61,6 @@
 		19C288B0AC92458E8FBD2BCD /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; name = "SF-Pro-Text-Medium.otf"; path = "../assets/fonts/SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		60217945E0F14702B19027C1 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; name = "SF-Pro-Text-Regular.otf"; path = "../assets/fonts/SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		F443D136772342E5A2D07079 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; name = "SF-Pro-Text-Semibold.otf"; path = "../assets/fonts/SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9ED422DD467740689506D6AB /* RobotoMono-Medium.ttf */ = {isa = PBXFileReference; name = "RobotoMono-Medium.ttf"; path = "../assets/fonts/RobotoMono-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		84D87CD479574167A74EFC8F /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; name = "Ubuntu-Medium.ttf"; path = "../assets/fonts/Ubuntu-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		CE9210F59A0141C38C9082D7 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; name = "Ubuntu-Regular.ttf"; path = "../assets/fonts/Ubuntu-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		8C727AE1F674407CACC75D00 /* SF-Pro-Rounded-Bold.ttf */ = {isa = PBXFileReference; name = "SF-Pro-Rounded-Bold.ttf"; path = "../assets/fonts/SF-Pro-Rounded-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		77EE4D1CE65B4DBEAB74498A /* SF-Pro-Rounded-Heavy.ttf */ = {isa = PBXFileReference; name = "SF-Pro-Rounded-Heavy.ttf"; path = "../assets/fonts/SF-Pro-Rounded-Heavy.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		E02F15B4D12846088F1373E4 /* SF-Pro-Rounded-Medium.ttf */ = {isa = PBXFileReference; name = "SF-Pro-Rounded-Medium.ttf"; path = "../assets/fonts/SF-Pro-Rounded-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
@@ -186,9 +180,6 @@
 				19C288B0AC92458E8FBD2BCD /* SF-Pro-Text-Medium.otf */,
 				60217945E0F14702B19027C1 /* SF-Pro-Text-Regular.otf */,
 				F443D136772342E5A2D07079 /* SF-Pro-Text-Semibold.otf */,
-				9ED422DD467740689506D6AB /* RobotoMono-Medium.ttf */,
-				84D87CD479574167A74EFC8F /* Ubuntu-Medium.ttf */,
-				CE9210F59A0141C38C9082D7 /* Ubuntu-Regular.ttf */,
 				8C727AE1F674407CACC75D00 /* SF-Pro-Rounded-Bold.ttf */,
 				77EE4D1CE65B4DBEAB74498A /* SF-Pro-Rounded-Heavy.ttf */,
 				E02F15B4D12846088F1373E4 /* SF-Pro-Rounded-Medium.ttf */,
@@ -301,9 +292,6 @@
 				E23B55F1FF7944BEA3B11BAE /* SF-Pro-Text-Medium.otf in Resources */,
 				7BB8EEC32EE740A5A4336016 /* SF-Pro-Text-Regular.otf in Resources */,
 				DBAEF9D6126645A08A415410 /* SF-Pro-Text-Semibold.otf in Resources */,
-				F8119D9C69554206B70AC031 /* RobotoMono-Medium.ttf in Resources */,
-				FFD59016120A408AB6C7C225 /* Ubuntu-Medium.ttf in Resources */,
-				268CB120C4E74043847C99A7 /* Ubuntu-Regular.ttf in Resources */,
 				F685337BA9A3459BB24ACE1B /* SF-Pro-Rounded-Bold.ttf in Resources */,
 				2D0D83EAF9044D7F8791E3D7 /* SF-Pro-Rounded-Heavy.ttf in Resources */,
 				E7CED2D60DD34E569EAD7481 /* SF-Pro-Rounded-Medium.ttf in Resources */,

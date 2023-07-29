@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
-// import { MotiView } from 'moti';
 
 //constants
 import { Colors } from '../constants/Colors';

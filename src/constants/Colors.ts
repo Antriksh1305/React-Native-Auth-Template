@@ -1,7 +1,7 @@
-const Colors = {
+export const Colors = {
   primary: '#545264',
-  white: "#f8f8f9",
-  black: "#161616",
+  white: '#f8f8f9',
+  black: '#161616',
   gray: 'gray',
   medium_gray: '#999',
   dark_gray: '#555',
@@ -18,4 +18,3 @@ const Colors = {
   palette_gray_dark: '#9DA5C1',
   palette_white: '#FFFFFF',
 };
-export {Colors};
