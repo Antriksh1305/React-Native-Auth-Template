@@ -9,18 +9,20 @@ const height = Screen.SCREEN_HEIGHT;
 
 const GoogleBtn = (props) => {
     return (
-        <View>
-            <TouchableHighlight style={styles.GoogleHighlightBox} onPress={props.handleonPress}>
-                <View style={styles.Googlebtnbox}>
-                    <View style={styles.GoogleLogoAnim} >
-                        <Lottie source={require('../../../../assets/animation/googleLogoAnim.json')} autoPlay={true} loop={true} style={styles.GoogleLoginLogo} />
+        <>
+            <View>
+                <TouchableHighlight style={styles.GoogleHighlightBox} onPress={props.handleonPress}>
+                    <View style={styles.Googlebtnbox}>
+                        <View style={styles.GoogleLogoAnim} >
+                            <Lottie source={require('../../../../assets/animation/googleLogoAnim.json')} autoPlay={true} loop={true} style={styles.GoogleLoginLogo} />
+                        </View>
+                        <View>
+                            <Text style={styles.Googlebtntext}>Log In with Google</Text>
+                        </View>
                     </View>
-                    <View>
-                        <Text style={styles.Googlebtntext}>Log In with Google</Text>
-                    </View>
-                </View>
-            </TouchableHighlight>
-        </View>
+                </TouchableHighlight>
+            </View>
+        </>
     );
 };
 

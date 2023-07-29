@@ -21,31 +21,43 @@ const Signup = (props) => {
       const [password, setPassword] = useState('');
       const [confirmPass, setConfirmPass] = useState('');
       const [error, setError] = useState('');
-      const [success,setSuccess] = useState(false);
+      const [success, setSuccess] = useState(false);
 
       return (
-            <MotiView
-                  style={styles.lowercont}
-                  from={{ translateX: width, opacity: 0 }}
-                  animate={animateStyles}
-                  transition={transitionConfig}
-            >
-                  <Mainheader onGoogleButtonPress={() => onGoogleButtonPress(setError,setSuccess)} />
-                  <View>
-                        <InputBox SvgName={'Account'} onChangeText={setName} value={name} placeholder={'Enter Your First Name'} />
-                        <InputBox SvgName={'Email'} onChangeText={setEmail} value={email} placeholder={'Enter Your Email'} />
-                        <InputBox SvgName={'Password'} onChangeText={setPassword} value={password} placeholder={'Enter Your Password'} />
-                        <InputBox
-                              SvgName={'ConfirmPass'}
-                              onChangeText={setConfirmPass}
-                              value={confirmPass}
-                              password={password}
-                              placeholder={'Confirm Password'}
-                        />
-                  </View>
-                  <Footer handleSignupPress={() => handleSignupPress(name,email,password,confirmPass,setError,setSuccess)} setLogin={props.setLogin} />
-                  <SnackBar error={error} setError={setError} success={success} />
-            </MotiView>
+            <>
+                  <MotiView
+                        style={styles.lowercont}
+                        from={{ translateX: width, opacity: 0 }}
+                        animate={animateStyles}
+                        transition={transitionConfig}
+                  >
+                        <Mainheader onGoogleButtonPress={() => {
+                              onGoogleButtonPress(setError, setSuccess);
+                              setTimeout(() => {
+                                    props.navigation.navigate('Home');
+                              }, 500);
+                        }} />
+                        <View>
+                              <InputBox SvgName={'Account'} onChangeText={setName} value={name} placeholder={'Enter Your First Name'} />
+                              <InputBox SvgName={'Email'} onChangeText={setEmail} value={email} placeholder={'Enter Your Email'} />
+                              <InputBox SvgName={'Password'} onChangeText={setPassword} value={password} placeholder={'Enter Your Password'} />
+                              <InputBox
+                                    SvgName={'ConfirmPass'}
+                                    onChangeText={setConfirmPass}
+                                    value={confirmPass}
+                                    password={password}
+                                    placeholder={'Confirm Password'}
+                              />
+                        </View>
+                        <Footer handleSignupPress={() => handleSignupPress(name, email, password, confirmPass, setError, setSuccess, () => {
+                              // onSuccessCallback function executed after successful login
+                              setTimeout(() => {
+                                    props.navigation.navigate('Home');
+                              }, 1000);
+                        })} setLogin={props.setLogin} />
+                        <SnackBar error={error} setError={setError} success={success} />
+                  </MotiView>
+            </>
       );
 };
 

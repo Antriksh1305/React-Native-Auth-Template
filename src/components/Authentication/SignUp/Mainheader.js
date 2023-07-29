@@ -9,16 +9,18 @@ const height = Screen.SCREEN_HEIGHT;
 
 const Mainheader = ({ onGoogleButtonPress }) => {
     return (
-        <View style={styles.lowerHeading}>
-            <View>
-                <Text style={styles.registertxt}>Register</Text>
-            </View>
-            <TouchableOpacity onPress={onGoogleButtonPress}>
-                <View style={styles.GoogleRegisterBox}>
-                    <Lottie source={require('../../../../assets/animation/googleLogoAnim.json')} autoPlay={true} loop={true} style={styles.GoogleRegisterLogo} />
+        <>
+            <View style={styles.lowerHeading}>
+                <View>
+                    <Text style={styles.registertxt}>Register</Text>
                 </View>
-            </TouchableOpacity>
-        </View>
+                <TouchableOpacity onPress={onGoogleButtonPress}>
+                    <View style={styles.GoogleRegisterBox}>
+                        <Lottie source={require('../../../../assets/animation/googleLogoAnim.json')} autoPlay={true} loop={true} style={styles.GoogleRegisterLogo} />
+                    </View>
+                </TouchableOpacity>
+            </View>
+        </>
     );
 };
 

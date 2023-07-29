@@ -10,32 +10,30 @@ export const isValidPassword = (password) => {
     return length >= 6;
 };
 
-export const handleLoginPress = (email, password, setError, setSuccess) => {
+export const handleLoginPress = (email, password, setError, setSuccess, onSuccessCallback) => {
     setSuccess(false);
     if (email === '' || password === '') {
         setError('Please Enter Your Credentials');
-    }
-    else if (!isValidEmail(email)) {
+    } else if (!isValidEmail(email)) {
         setError('Please Enter a Valid Email');
-    }
-    else if (!isValidPassword(password)) {
+    } else if (!isValidPassword(password)) {
         setError('Password must be at least 6 characters');
-    }
-    else {
+    } else {
         setSuccess(true);
         setError('Logged in Successfully');
-        console.log('Login');
+
+        // Calling the onSuccessCallback
+        if (typeof onSuccessCallback === 'function') { onSuccessCallback(); }
     }
-    return;
 };
 
-export const onGoogleButtonPress = (setError,setSuccess) => {
+export const onGoogleButtonPress = (setError, setSuccess) => {
     setSuccess(true);
     setError('Google Login Successful');
     console.log('Google Button Pressed');
 };
 
-export const handleSignupPress = (name,email,password,confirmPass,setError,setSuccess) => {
+export const handleSignupPress = (name, email, password, confirmPass, setError, setSuccess, onSuccessCallback) => {
     setSuccess(false);
     if (name === '' || email === '' || password === '' || confirmPass === '') {
         setError('Please Enter Your Credentials');
@@ -52,12 +50,14 @@ export const handleSignupPress = (name,email,password,confirmPass,setError,setSu
     else {
         setSuccess(true);
         setError('Logged in Successfully');
-        console.log('Login');
+
+        // Calling the onSuccessCallback
+        if (typeof onSuccessCallback === 'function') { onSuccessCallback(); }
     }
     return;
 };
 
-export const handlePasswordReset = (email, setError, setSuccess) => {
+export const handlePasswordReset = (email, setError, setSuccess, onSuccessCallback) => {
     setSuccess(false);
     if (email === '') {
         setError('Please Enter Your Email');
@@ -69,6 +69,8 @@ export const handlePasswordReset = (email, setError, setSuccess) => {
     else {
         setSuccess(true);
         setError('Login Successful');
+
+        if (typeof onSuccessCallback === 'function') { onSuccessCallback(); }
     }
     console.log('Password Reset');
 };

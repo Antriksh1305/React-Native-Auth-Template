@@ -16,7 +16,7 @@ import Login from './Login';
 import Signup from './Signup';
 import ForgotPassword from './ForgotPassword';
 
-const AuthenticationPage = () => {
+const AuthenticationPage = (props) => {
     const [login, setLogin] = useState(true);
     const [forgotpass, setForgotpass] = useState(false);
 
@@ -36,10 +36,10 @@ const AuthenticationPage = () => {
                     forgotpass ? (
                         <ForgotPassword setForgotpass={setForgotpass} />
                     ) : (
-                        <Login setForgotpass={setForgotpass} />
+                        <Login setForgotpass={setForgotpass} navigation={props.navigation} />
                     )
                 ) : (
-                    <Signup setLogin={setLogin} />
+                    <Signup setLogin={setLogin} navigation={props.navigation} />
                 )}
             </View>
         </ScrollView>

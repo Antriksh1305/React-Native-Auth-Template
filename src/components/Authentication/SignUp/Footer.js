@@ -8,20 +8,22 @@ const height = Screen.SCREEN_HEIGHT;
 
 const Footer = ({ setLogin, handleSignupPress }) => {
     return (
-        <View style={styles.footer}>
-            <TouchableOpacity activeOpacity={0.5} style={styles.btnhighlight} onPress={() => handleSignupPress()}>
-                <View style={styles.btnbox}>
-                    <Text style={styles.btntxt}>Sign-up</Text>
-                </View>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => { setLogin(true); }}>
-                <View>
-                    <Text style={styles.AccAlreadytxt}>Already have{'\n'}Account?
-                        <Text style={styles.AccAlreadyLogintxt}> Login</Text>
-                    </Text>
-                </View>
-            </TouchableOpacity>
-        </View>
+        <>
+            <View style={styles.footer}>
+                <TouchableOpacity activeOpacity={0.5} style={styles.btnhighlight} onPress={() => handleSignupPress()}>
+                    <View style={styles.btnbox}>
+                        <Text style={styles.btntxt}>Sign-up</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => { setLogin(true); }}>
+                    <View>
+                        <Text style={styles.AccAlreadytxt}>Already have{'\n'}Account?
+                            <Text style={styles.AccAlreadyLogintxt}> Login</Text>
+                        </Text>
+                    </View>
+                </TouchableOpacity>
+            </View>
+        </>
     );
 };
 

@@ -1,8 +1,14 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Snackbar } from 'react-native-paper';
-import { StyleSheet } from 'react-native';
+
+// Constants
+import * as Screen from '../../constants/Screen';
+
+const width = Screen.SCREEN_WIDTH;
+const height = Screen.SCREEN_HEIGHT;
 
 export const SnackBar = ({ error, setError, success }) => {
     return (
@@ -16,7 +22,7 @@ export const SnackBar = ({ error, setError, success }) => {
                     onPress: () => setError(''),
                 }}
                 style={[
-                    { backgroundColor: success ? '#4caf50' : '#323232', height: 50, alignItems: 'center' },
+                    { backgroundColor: success ? '#4caf50' : '#323232', height: 50, alignItems: 'center', position: 'absolute', bottom: 0 , left: 0, width: width*0.961 },
                 ]}
             >
                 {error}
@@ -27,8 +33,8 @@ export const SnackBar = ({ error, setError, success }) => {
 
 const styles = StyleSheet.create({
     snackbar: {
-        flex: 1,
         alignSelf: 'flex-start',
+        justifyContent: 'flex-end',
         zIndex: 1000,
     },
 });

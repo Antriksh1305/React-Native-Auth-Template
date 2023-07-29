@@ -21,36 +21,51 @@ const Login = React.memo((props) => {
       const [email, onChangeEmail] = useState('');
       const [password, onChangePassword] = useState('');
       const [error, setError] = useState('');
-      const [success,setSuccess] = useState(false);
+      const [success, setSuccess] = useState(false);
 
       return (
-            <MotiView style={styles.lowercont} from={{ translateX: -width, opacity: 0 }} animate={animateStyles} transition={transitionConfig} >
-                  <View style={styles.InputBoxes}>
-                        <InputBox SvgName={'Email'} onChangeText={onChangeEmail} value={email} placeholder={'Enter Your Email'} />
-                        <InputBox SvgName={'Password'} onChangeText={onChangePassword} value={password} placeholder={'Enter Your Password'} />
-                  </View>
-                  <View style={styles.forgotPassBox}>
-                        <TouchableOpacity style={{ alignSelf: 'flex-start' }} onPress={() => props.setForgotpass(true)}>
-                              <Text style={styles.forgotpasstext}>Forgot Password?</Text>
-                        </TouchableOpacity>
-                  </View>
-                  <View style={{ alignItems: 'center' }}>
-                        <TouchableOpacity activeOpacity={0.55} style={styles.btnhighlight} onPress={() => handleLoginPress(email, password, setError, setSuccess)}>
-                              <View style={styles.btnbox}>
-                                    <Text style={styles.btntxt}>Login</Text>
-                              </View>
-                        </TouchableOpacity>
-                        <View style={styles.SeparatorBox}>
-                              <View style={styles.lineSeparator} />
-                              <Text style={styles.Or_Separator}>Or</Text>
-                              <View style={styles.lineSeparator} />
+            <>
+                  <MotiView style={styles.lowercont} from={{ translateX: -width, opacity: 0 }} animate={animateStyles} transition={transitionConfig} >
+                        {/* <Button title="Click" onPress={() => props.navigation.navigate('Home')} /> */}
+                        <View style={styles.InputBoxes}>
+                              <InputBox SvgName={'Email'} onChangeText={onChangeEmail} value={email} placeholder={'Enter Your Email'} />
+                              <InputBox SvgName={'Password'} onChangeText={onChangePassword} value={password} placeholder={'Enter Your Password'} />
                         </View>
-                        <GoogleBtn handleonPress={() => onGoogleButtonPress(setError,setSuccess)} />
-                  </View>
-                  <SnackBar error={error} setError={setError} success={success} />
-            </MotiView>
+                        <View style={styles.forgotPassBox}>
+                              <TouchableOpacity style={{ alignSelf: 'flex-start' }} onPress={() => props.setForgotpass(true)}>
+                                    <Text style={styles.forgotpasstext}>Forgot Password?</Text>
+                              </TouchableOpacity>
+                        </View>
+                        <View style={{ alignItems: 'center' }}>
+                              <TouchableOpacity activeOpacity={0.55} style={styles.btnhighlight} onPress={() => {
+                                    handleLoginPress(email, password, setError, setSuccess, () => {
+                                          // onSuccessCallback function executed after successful login
+                                          setTimeout(() => {
+                                                props.navigation.navigate('Home');
+                                          }, 500);
+                                    });
+                              }} >
+                                    <View style={styles.btnbox}>
+                                          <Text style={styles.btntxt}>Login</Text>
+                                    </View>
+                              </TouchableOpacity>
+                              <View style={styles.SeparatorBox}>
+                                    <View style={styles.lineSeparator} />
+                                    <Text style={styles.Or_Separator}>Or</Text>
+                                    <View style={styles.lineSeparator} />
+                              </View>
+                              <GoogleBtn handleonPress={() => {
+                                    onGoogleButtonPress(setError, setSuccess);
+                                    setTimeout(() => {
+                                          props.navigation.navigate('Home');
+                                    }, 1000);
+                              }} />
+                        </View>
+                        <SnackBar error={error} setError={setError} success={success} />
+                  </MotiView>
+            </>
       );
-},(prevProps,nextProps) => {
+}, (prevProps, nextProps) => {
       return true;
 });
 

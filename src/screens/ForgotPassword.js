@@ -20,47 +20,53 @@ const ForgotPassword = React.memo((props) => {
       const [success, setSuccess] = useState(false);
 
       return (
-            <MotiView style={styles.lowercont} from={{ scale: 0.7, opacity: 0 }} animate={animateStyles3} transition={transitionConfig}>
-                  <View style={styles.lowermaincont}>
-                        <TouchableOpacity onPress={() => { props.setForgotpass(false); }}>
-                              <View style={styles.backbtn}>
-                                    <View style={{ paddingRight: width / 196 }} >
-                                          <Svginserter tag={'Back'} width={width / 14} height={width / 14} />
-                                    </View>
-                              </View>
-                        </TouchableOpacity>
-                        <View style={styles.ForgotHeadingBox}>
-                              <Text style={styles.ForgotHeadingtxt}>Forgot{'\n'}password?</Text>
-                        </View>
-                        <View style={styles.inputTextBox}>
-                              <View style={styles.EntryLogoBox}><Svginserter tag={'Mail'} width={width / 16.2} height={width / 16.2} /></View>
-                              <View>
-                                    <TextInput
-                                          style={styles.input}
-                                          onChangeText={setEmail}
-                                          value={email}
-                                          placeholder="Enter your email address"
-                                          keyboardType="email-address"
-                                          cursorColor={'black'}
-                                          autoFocus={false}
-                                    />
-                              </View>
-                        </View>
-                        <View style={styles.NoteBox}>
-                              <Text style={styles.NoteTxt}><Text style={{ color: Colors.palette_primary }}>*</Text> We will send you a message to set or reset your new password</Text>
-                        </View>
-                        <View style={styles.Sendbtncont}>
-                              <TouchableOpacity onPress={() => handlePasswordReset(email,setError,setSuccess)}>
-                                    <View style={styles.Sendbtn}>
-                                          <Svginserter tag={'ArrowRight'} width={width / 14} height={width / 14} />
+            <>
+                  <MotiView style={styles.lowercont} from={{ scale: 0.7, opacity: 0 }} animate={animateStyles3} transition={transitionConfig}>
+                        <View style={styles.lowermaincont}>
+                              <TouchableOpacity onPress={() => { props.setForgotpass(false); }}>
+                                    <View style={styles.backbtn}>
+                                          <View style={{ paddingRight: width / 196 }} >
+                                                <Svginserter tag={'Back'} width={width / 14} height={width / 14} />
+                                          </View>
                                     </View>
                               </TouchableOpacity>
+                              <View style={styles.ForgotHeadingBox}>
+                                    <Text style={styles.ForgotHeadingtxt}>Forgot{'\n'}password?</Text>
+                              </View>
+                              <View style={styles.inputTextBox}>
+                                    <View style={styles.EntryLogoBox}><Svginserter tag={'Mail'} width={width / 16.2} height={width / 16.2} /></View>
+                                    <View>
+                                          <TextInput
+                                                style={styles.input}
+                                                onChangeText={setEmail}
+                                                value={email}
+                                                placeholder="Enter your email address"
+                                                keyboardType="email-address"
+                                                cursorColor={'black'}
+                                                autoFocus={false}
+                                          />
+                                    </View>
+                              </View>
+                              <View style={styles.NoteBox}>
+                                    <Text style={styles.NoteTxt}><Text style={{ color: Colors.palette_primary }}>*</Text> We will send you a message to set or reset your new password</Text>
+                              </View>
+                              <View style={styles.Sendbtncont}>
+                                    <TouchableOpacity onPress={() => handlePasswordReset(email, setError, setSuccess, () => {
+                                          setTimeout(() => {
+                                                props.setForgotpass(false);
+                                          }, 1000);
+                                    })}>
+                                          <View style={styles.Sendbtn}>
+                                                <Svginserter tag={'ArrowRight'} width={width / 14} height={width / 14} />
+                                          </View>
+                                    </TouchableOpacity>
+                              </View>
                         </View>
-                  </View>
-                  <SnackBar error={error} setError={setError} success={success} />
-            </MotiView>
+                        <SnackBar error={error} setError={setError} success={success} />
+                  </MotiView>
+            </>
       );
-}, (prevProps, nextProps) => {
+}, () => {
       return true;
 });
 
@@ -98,7 +104,7 @@ const styles = StyleSheet.create({
             alignItems: 'center',
             backgroundColor: 'white',
             borderRadius: 10,
-            marginTop: 10,
+            marginTop: width / 39.1,
             shadowColor: Colors.body_dark,
             shadowOffset: { width: 0, height: 2 },
             shadowRadius: 10,

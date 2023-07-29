@@ -15,38 +15,40 @@ import { animateStyles2, transitionConfig } from './motiConfig';
 
 const Header = (props) => {
     return (
-        <MotiView
-            style={styles.upper}
-            from={{ translateY: -height * 0.35 }}
-            animate={animateStyles2}
-            transition={transitionConfig}
-        >
-            <View style={styles.loginAnimBox}>
-                <Lottie
-                    source={require('../../../assets/animation/login_animation.json')}
-                    autoPlay
-                    loop
-                    style={styles.loginAnim}
-                />
-            </View>
-            <View style={styles.loginSigninHeaderBox}>
-                <Pressable style={styles.AuthCmnHeaderBox} onPress={props.handleLoginPress}>
-                    <Text style={styles.HeaderCommontxt}>Login</Text>
-                </Pressable>
-                <Pressable style={styles.AuthCmnHeaderBox} onPress={props.handleSignupPress}>
-                    <Text style={styles.HeaderCommontxt}>Sign-up</Text>
-                </Pressable>
-            </View>
+        <>
             <MotiView
-                style={styles.MovingHighlight}
-                from={{ translateX: 0 }}
-                animate={props.login ? { translateX: 0 } : { translateX: width / 2.41 }}
-                transition={{
-                    type: 'spring',
-                    duration: 800,
-                }}
-            />
-        </MotiView>
+                style={styles.upper}
+                from={{ translateY: -height * 0.35 }}
+                animate={animateStyles2}
+                transition={transitionConfig}
+            >
+                <View style={styles.loginAnimBox}>
+                    <Lottie
+                        source={require('../../../assets/animation/login_animation.json')}
+                        autoPlay
+                        loop
+                        style={styles.loginAnim}
+                    />
+                </View>
+                <View style={styles.loginSigninHeaderBox}>
+                    <Pressable style={styles.AuthCmnHeaderBox} onPress={props.handleLoginPress}>
+                        <Text style={styles.HeaderCommontxt}>Login</Text>
+                    </Pressable>
+                    <Pressable style={styles.AuthCmnHeaderBox} onPress={props.handleSignupPress}>
+                        <Text style={styles.HeaderCommontxt}>Sign-up</Text>
+                    </Pressable>
+                </View>
+                <MotiView
+                    style={styles.MovingHighlight}
+                    from={{ translateX: 0 }}
+                    animate={props.login ? { translateX: 0 } : { translateX: width / 2.41 }}
+                    transition={{
+                        type: 'spring',
+                        duration: 800,
+                    }}
+                />
+            </MotiView>
+        </>
     );
 };
 
