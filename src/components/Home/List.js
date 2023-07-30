@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, Linking } from 'react-native';
 
 //constants
@@ -23,7 +23,7 @@ const handleLinkPress = (link, setError) => {
         });
 };
 
-const Item = (props) => {
+const Item = memo((props) => {
     return (
         <>
             <View style={styles.universityBox}>
@@ -53,9 +53,9 @@ const Item = (props) => {
             </View>
         </>
     );
-};
+});
 
-const List = (props) => {
+const List = memo((props) => {
     const [error, setError] = useState('');
 
     const renderItem = ({ item }) => {
@@ -75,7 +75,7 @@ const List = (props) => {
             </View>
         </>
     );
-};
+});
 
 const styles = StyleSheet.create({
     mainContainer: {
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         marginTop: width / 26.07,
     },
     regionTitleBox: {
-        width: '20%',
+        width: width * 0.22,
         paddingRight: width / 78.2,
     },
     regionTitleTxt: {
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
         marginTop: width / 78.2,
     },
     websiteTitleBox: {
-        width: '20%',
+        width: width * 0.22,
         paddingRight: width / 78.2,
     },
     websiteTitleTxt: {
