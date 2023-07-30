@@ -5,8 +5,23 @@
   <a href="https://reactnative.dev" target="_blank">
     <img alt="React Native Version" src="https://img.shields.io/badge/react--native-v0.72-blue.svg" />
   </a>
-  <!-- Add more badges here for version, license, dependencies, etc. -->
 </p>
+
+## 📱 Download the App and Experience It Yourself!
+<p align="left">
+  <a href="https://drive.google.com/file/d/1m-7XnwOGxDBUHAFaAsT-TRfrdLjBnzNi/view?usp=drivesdk" target="_blank">
+    <img src="https://img.shields.io/badge/Download-APK%20File-orange" alt="Download APK" />
+  </a>
+</p>
+Discover the power of our React Native Auth Template! Get hands-on with this high-performance authentication template for React Native, featuring an optimized Flatlist on the home screen.
+
+🚀 Easy Setup: Follow the simple steps to install the app on your Android device.
+
+🎉 Interactive Animations: Experience delightful animations with Lottie, Moti, and Reanimated libraries.
+
+💎 Material Design: Enjoy the sleek and modern design with React Native Paper.
+
+💡 Explore More: Check out the External Libraries used to create this impressive app.
 
 ## Getting Started
 
@@ -70,4 +85,8 @@ To learn more about React Native, take a look at the following resources:
 - Blog - Read the latest official React Native blog posts.
 - @facebook/react-native - The Open Source GitHub repository for React Native.
 
-<p align="center">Made with ❤️ by [Antriksh Gupta](https://antrikshcodes.tech/)</p>
+<p align="center">
+  <a href="https://antrikshcodes.tech/" target="_blank">
+    <img src="https://img.shields.io/badge/Made%20with%20%F0%9F%92%9C%EF%B8%8F%20by-Antriksh%20Gupta-blue" alt="Made with ❤️ by Antriksh Gupta" />
+  </a>
+</p>
