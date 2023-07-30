@@ -20,6 +20,7 @@ git clone https://github.com/Antriksh1305/React-Native-Auth-Template.git
 ```
 ### Step 2: Install the packages 
 ```bash
+cd React-Native-Auth-Template
 npm install
 ```
 
@@ -29,8 +30,13 @@ cd android
 ./gradlew assembleDebug or gradlew assembleDebug
 cd ..
 ```
+### Step 4:
+For Physical Android Device
+- Install the apk in your android device and open it.
+- Connect your android device
+- Make sure your device has enabled USB Debugging.
 
-### Step 4: 
+### Step 5:
 ```bash
 npm run android
 ```
